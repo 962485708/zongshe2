@@ -1,0 +1,12 @@
+/* components/singledaka/single.wxss */
+.flex-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-item{
+  flex-grow: 0;
+  text-align: center;
+}

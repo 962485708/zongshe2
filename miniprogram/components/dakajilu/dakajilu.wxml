@@ -1,0 +1,8 @@
+<view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="" class="nav-li bg-{{item.color}} {{item.signStatus ? '':'red'}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-id nav-item">{{index+1}}</view>
+      <view class="nav-item">打卡时间：</view> 
+      <view class="nav-time nav-item ">{{item.date?item.date:"-----------------"}}</view>   
+      <view class="nav-con nav-item " >{{item.signStatus?"已打卡":"未打卡"}}</view>
+    </navigator>
+</view>

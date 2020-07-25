@@ -1,0 +1,9 @@
+<!--components/singledaka/single.wxml-->
+<navigator >
+ <view class="flex-row">
+    <view class="flex-item">学号</view>
+    <view class="flex-item">日期</view>
+    <view class="flex-item">签到状态</view>
+ </view>
+</navigator>
+

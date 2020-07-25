@@ -1,0 +1,137 @@
+.login_page{
+  height: 100vh;
+}
+
+.login-title{
+  margin-top: 25%;
+  text-align: center;
+  font-size: 40rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+}
+
+.page_bg {
+	background-image: linear-gradient(to bottom right,rgb(84, 103, 211),rgb(77, 96, 233));
+}
+
+.login-container{
+	width: 700rpx;
+	height: 450rpx;
+	margin: 0 auto;
+	margin-top: 0%;
+	border-radius:15rpx;
+	box-shadow: 0 10rpx 50rpx 0rpx rgb(57, 42, 170);
+  background-color: rgb(54, 63, 184);
+}
+
+.login-container .left-container{
+	display:inline-block;
+	width: 550rpx;
+	border-top-left-radius: 15rpx;
+	border-bottom-left-radius: 15rpx;
+	padding: 60rpx;
+  background-image: linear-gradient(to bottom right,rgb(93, 102, 226),rgb(31, 46, 177));
+  height: 450rpx;
+}
+
+.login-container .left-container .title{
+	color: #fff;
+	font-size: 40rpx;
+	font-weight: 200;
+}
+
+.login-container .left-container .title span{
+	border-bottom:  3rpx solid rgb(237,221,22);
+}
+
+.login-container .left-container .input-container{
+	padding: 60rpx 0;
+}
+
+.login-container .left-container .input-container input{
+	border: 0;
+	background: none;
+	outline: 0;
+	color: #fff;
+	margin: 40rpx 0;
+	display: block;
+	width: 100%;
+	padding: 5rpx 0;
+	transition: .2s;
+	border-bottom: 1rpx solid rgb(199,191,219);
+}
+
+.login-container .left-container .input-container input:hover{
+	border-bottom-color: #FFFFFF;
+}
+
+::-webkit-input-placeholder{
+	color: rgb(199,191,219);
+}
+
+
+.login-container .right-container{
+	width: 145rpx;
+	display:inline-block;
+	height: 390rpx;
+	vertical-align: top;
+	padding: 60rpx 0;
+}
+
+.login-container .right-container .regist-container{
+	text-align: center;
+	color: rgb(199,191,219);
+	font-size:30rpx ;
+	font-weight: 200;
+}
+
+.login-container .right-container .regist-container span{
+	border-bottom: 3rpx solid rgb(237,221,22);
+}
+
+.login-container .right-container .regist-container span:hover{
+	color: #FFF;
+}
+
+.login-container .right-container .action-container{
+	height:100%;
+	text-align: center;
+  position: relative;
+}
+
+.login-container .right-container .action-container .button-box{
+  border: 1rpx solid rgb(237,221,22);
+  padding: 0;
+	border-radius: 10%;
+  position: absolute;
+  margin-left: 20%;
+  bottom: 20rpx;
+	transition: .2s;
+  cursor: pointer;
+  /* text-align: center; */
+  line-height: 25rpx;
+  /* align-items: center;
+  align-content: center; */
+}
+
+.login-container .right-container .action-container button{
+  color: #FFF;
+  height: 90rpx;
+  width: 90rpx;
+  line-height: 90rpx;
+  font-size: 25rpx;
+  padding: 0;
+  /* align-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+  /* vertical-align: center; */
+  background-color: inherit;
+}
+
+
+
+.login-container .right-container .action-container button:hover{
+	background-color: rgb(237,221,22);
+	color: rgb(95,76,194);
+}

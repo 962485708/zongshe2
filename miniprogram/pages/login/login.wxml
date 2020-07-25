@@ -1,0 +1,33 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="page_bg login_page">
+    <view class="login-title">学生实习管理系统</view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    		<view class="login-container" id="app">
+		     	<view class="left-container">
+			      	<view class="title"><span>登录</span></view>
+             	<view class="input-container">
+				      <input type="text" name="username" placeholder="用户名" bindblur='changeinput' bindconfirm='changeinput' bindinput='changeinput'/>
+			  	    <input type="password" name="password" placeholder="密码" bindblur='changeinput' bindconfirm='changeinput' bindinput='changeinput'/>
+							<text style="color:red">{{errortext}}</text>
+			  	</view>
+				
+		  	</view>
+		     	<view class="right-container">
+			  	<view class="regist-container">
+			  		<span class="regist">注册</span>
+				</view>
+				<view class="action-container">
+					<!-- <span form-type="submit">提交</span> -->
+          <view class="button-box">
+              <button form-type="submit">登录</button>
+          </view>
+         
+				</view>
+			</view>
+    </view>
+    </form> 
+
+
+</view>
+
+

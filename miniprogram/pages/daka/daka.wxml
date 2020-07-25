@@ -1,0 +1,61 @@
+<view class="page_bg">
+<view class="from_page">
+ 
+  <view class="daka-title">
+      <text> 每日签到</text>
+  </view>
+
+      <!-- 横幅 -->
+    <view class="cu-bar cu-bar-box">
+        <view class="action sub-title">
+        <text class="text-xl text-bold ">签到</text>
+        <text class="text-ABC ">signin</text>
+        <!-- last-child选择器-->
+        </view>
+    </view>
+
+<block wx:if="{{hassigntoday}}">
+    <view class="tip">今天已经打过卡了哦!</view>
+</block>
+
+
+<block wx:else>
+ <form bindsubmit="formSubmit" bindreset="formReset">  
+  <!-- 姓名 -->
+  <view class="cu-form-group margin-top">
+		<view class="title" ><text>姓名</text> </view>
+		<input disabled name="StuName" value="{{StuName}}"></input>
+	</view>
+
+  <!-- 学号 -->
+  <view class="cu-form-group">
+		<view class="title" ><text>学号</text> </view>
+		<input disabled name="StudentID" value="{{StudentID}}"></input>
+	</view>
+  
+   <!-- 地址 -->
+  <view class="cu-form-group">
+		<view class="title" >时间</view>
+		<input disabled name="Date" value="{{Date}}"></input>
+	 </view>
+
+    <!-- 地址-->
+  <view class="cu-form-group margin-bottom">
+		<view class="title" >地址</view>
+		<input disabled name="Address" value="{{address}}" bindtap="getLocation"></input>
+	</view>
+
+  <!-- 提交按钮 -->
+  <view style="margin-top:30%">
+    <view class="cu-bar btn-group margin-top">
+    <button form-type="submit" class="cu-btn bg-blue shadow-blur round lg" disabled="{{cansign}}">{{cansign?"请到达公司后再签到":"一键签到"}}</button>
+    </view>
+  </view>
+
+ </form>
+</block>
+
+</view>
+</view>
+
+

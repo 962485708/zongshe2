@@ -1,0 +1,9 @@
+{  
+  "triggers": [
+    {   
+      "name": "trigger",
+      "type": "timer",
+      "config": "59 59 23 * * MON-FRI *"
+    }
+  ]
+}

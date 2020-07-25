@@ -1,0 +1,147 @@
+<view class="page_bg">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="daka-title">
+      <text> 实习基本信息填报</text>
+  </view>
+
+    <!-- 横幅 -->
+    <view class="cu-bar cu-bar-box">
+        <view class="action sub-title">
+        <text class="text-xl text-bold ">个人信息</text>
+        <text class="text-ABC ">information</text>
+        <!-- last-child选择器-->
+        </view>
+    </view>
+
+  <!-- 学生姓名 -->
+  <view class="cu-form-group">
+		<view class="title" >学生姓名</view>
+		<input disabled name="StuName" placeholder="姓名" value="{{StuName}}"></input>
+	</view>
+
+  <!-- 学号 -->
+  <view class="cu-form-group">
+		<view class="title" ><text space="emsp">学  号</text></view>
+		<input disabled name="StudentID" placeholder="学号" value="{{studentID}}"></input>
+	</view>
+
+    <!-- 年级 -->
+  <view class="cu-form-group">
+		<view class="title" ><text space="emsp">年  级</text></view>
+		<input name="Grade" placeholder="例：2018级" value="{{Grade}}"></input>
+	</view>
+
+  <!-- 学院 -->
+  <view class="cu-form-group">
+		<view class="title" ><text space="emsp">学  院</text></view>
+		<input name="PersonAcademy" placeholder="例：信息与软件工程学院" value="{{PersonAcademy}}"></input>
+	</view>
+
+
+  <!-- 性别 -->
+		<view class="cu-form-group">
+    <!-- 选择器 -->
+		<view class="title"><text space="emsp">性  别</text></view>
+		<picker name="Sex" bindchange="PickerChange" value="{{Sex}}" range="{{picker}}">
+			<view class="picker">
+				{{Sex}}
+			</view>
+		</picker>
+	</view>
+
+    <!-- 横幅 -->
+    <view class="cu-bar cu-bar-box">
+        <view class="action sub-title">
+        <text class="text-xl text-bold ">实习信息</text>
+        <text class="text-ABC ">information</text>
+        <!-- last-child选择器-->
+        </view>
+    </view>
+
+  <!-- 电话号码 -->
+  <view class="cu-form-group  margin-top">
+		<view class="title" >电话号码</view>
+		<input name="Number" placeholder="" value="{{Number}}"></input>
+	</view>
+
+  <!--实习公司 -->
+  <view class="cu-form-group">
+		<view class="title" >实习公司</view>
+		<input name="CompanyName" placeholder="公司名称" value="{{CompanyName}}"></input>
+	</view>
+
+    <!--单位地址 -->
+  <view class="cu-form-group" bindtap="toGetLocationPg">
+		<view class="title" >单位地址</view>
+		<input name="ComAddress" value="{{ComAddress}}" placeholder="点击选址"></input>
+	</view>
+
+    <!--实习状态 -->
+  <view class="cu-form-group">
+		<view class="title" >实习状态</view>
+		<input name="IntStatus" placeholder="实习期/实习结束" value="{{IntStatus}}"></input>
+	</view>
+
+  <!-- 开始时间 -->
+  <view class="cu-form-group">
+		<view class="title">开始时间</view>
+		<picker name="StartTime" mode="date" value="{{StartTime}}" start="2020-01-01" end="2022-12-31" bindchange="StartDateChange">
+			<view class="picker">
+				{{StartTime}}
+			</view>
+		</picker>
+	</view>
+
+  <!-- 结束时间 -->
+  <view class="cu-form-group">
+		<view class="title">结束时间</view>
+		<picker name="EndTime" mode="date" value="{{EndTime}}" start="2020-01-01" end="2022-12-31" bindchange="EndDateChange">
+			<view class="picker">
+				{{EndTime}}
+			</view>
+		</picker>
+	</view>
+
+    <!--住宿状态 -->
+  <view class="cu-form-group">
+		<view class="title" >住宿状态</view>
+		<input name="AccStatus" placeholder="" value="{{AccStatus}}"></input>
+	</view>
+
+  <!--住宿地址 -->
+  <view class="cu-form-group">
+		<view class="title" >住宿地址</view>
+		<input name="AccAddress" placeholder="精确到门牌号" value="{{AccAddress}}"></input>
+	</view>
+
+  <!-- 住宿协议上传 -->
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			相关图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/4
+		</view>
+	</view>
+  <view class="cu-form-group" >
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+
+
+
+  <!-- 提交按钮 -->
+  <view class="cu-bar btn-group  margin-top">
+    <button form-type="submit" class="cu-btn bg-blue shadow-blur round lg" >保存</button>
+  </view>
+</form>
+</view> 

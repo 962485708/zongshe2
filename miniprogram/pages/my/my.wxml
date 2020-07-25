@@ -1,0 +1,29 @@
+<view class="page_bg">
+  <view class="user flex-row">
+    <view class="photo">
+      <image class="userinfo-avatar flex-wrp" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="information">
+        <view class=" item" style="magin-left:10rpx">姓名: {{Stuinfo.name}}</view>
+        <view class=" item" style="magin-left:10rpx">学号: {{Stuinfo.studentID}}</view>
+    </view>
+  </view>
+
+   <view class="login_button" wx:if="{{!hasUserinfo}}"> 
+      <button class="cu-btn bg-blue shadow-blur round" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >微信授权登录</button>
+     <view wx:else>请升级微信版本</view>
+   </view>
+
+    <view class="cu-bar cu-bar-box">
+        <view class="action sub-title">
+        <text class="text-xl text-bold ">打卡记录</text>
+        <text class="text-ABC ">record</text>
+        <!-- last-child选择器-->
+        </view>
+    </view>
+
+  <view class="my-container">
+    <daka elements="{{dakajilu}}"></daka>
+  </view>
+</view> 
+ 

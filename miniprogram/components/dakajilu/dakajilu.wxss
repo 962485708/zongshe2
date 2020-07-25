@@ -1,0 +1,65 @@
+/* components/dakajilu/dakajilu.wxss */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  padding: 0px 20rpx 0px;
+  justify-content: flex-start;
+  width: 750rpx;
+  flex-grow:1;
+}
+
+.nav-li {
+  flex-grow:1;
+  /* padding: rpx; */
+  border-radius: 4rpx;
+  width: 710rpx;
+  margin: auto;
+  height: 120rpx;
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+}
+
+
+.flex-column{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.nav-id{
+  width: 80rpx;
+  font-size: 30rpx;
+  border-radius: 50%;
+}
+
+.nav-time{
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.nav-con{
+  font-size: 35rpx;
+  opacity: 0.6;
+  padding-right:20rpx ;
+}
+
+.nav-item{
+  text-align:center;
+  line-height: 120rpx;
+}
+.red{
+  color: red;
+}
